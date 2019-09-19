@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pais</title>
+
+        <style> 
+
+            body{
+                background: rgb(33, 33, 170);
+                color: white;
+                font: oblique bold; 
+            }
+
+            h1{
+                color: goldenrod;
+                border-bottom: black 2px solid;
+                text-align: center;
+                font-size: 40px; 
+            }
+
+
+        </style>
+
+</head>
+<body>
+
+    <h1>My New Life</h1>
+    Type it your Country: 
+    <input type="text" name="esc" id="esc">
+    <input type="button" value="pesquisar" onclick="Show()"><br>
+
+    <div id="res">
+
+    </div>
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+  
+
+  <script>
+    
+    function Show()
+    {
+        var esc = window.document.querySelector('input#esc')
+        var res = window.document.querySelector('div#res')
+        var live = String(esc.value)
+        res.innerHTML = `<p>Your Country is  <strong>${live}</strong>.</p>`
+        
+            if (live == 'Brasil')
+            {
+                res.innerHTML += `<p>Currently you is <strong>native Brasilian</strong></p>`
+            }else{
+                res.innerHTML += `<p>Your Country is <strong>${live}</strong>. <strong>WELCOME TO THE BRASIL!</strong></p>`
+            }
+    }
+   </script>
+
+</body>
+</html>
